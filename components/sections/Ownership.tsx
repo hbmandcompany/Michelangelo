@@ -132,14 +132,14 @@ export function Ownership() {
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
         >
           <a
-            href="#"
+            href="#contact"
             className="inline-flex rounded-sm border border-gold px-8 py-3 font-body text-base text-cream transition-colors duration-600 hover:bg-gold hover:text-charcoal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream focus-visible:ring-offset-2 focus-visible:ring-offset-deepBrown"
           >
             Learn About Ether Bonds
           </a>
-          <p className="mx-auto mt-4 max-w-prose font-mono text-[11px] text-stone">
-            Link placeholder — associate with instrument whitepaper or long-form appendix when
-            finalized.
+          <p className="mx-auto mt-5 max-w-prose font-mono text-[11px] leading-relaxed text-stone">
+            Full instrument appendix ships with cohort documentation — inquire via early access when
+            you are ready for settlement detail.
           </p>
         </motion.div>
       </div>

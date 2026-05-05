@@ -1,10 +1,10 @@
+import { SocialLinks } from '@/components/ui/SocialLinks'
+
 const linkClass =
   'group inline-block font-body text-sm text-cream/85 transition-colors duration-500 hover:text-gold'
 
 const underline =
   'relative after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-500 group-hover:after:w-full'
-
-import { SocialLinks } from '@/components/ui/SocialLinks'
 
 const platformLinks = [
   { label: 'Notebook', href: '#notebook' },
@@ -34,7 +34,7 @@ const resourceLinks = [
 export function Footer() {
   return (
     <footer className="bg-deepBrown text-cream">
-      <div className="mx-auto max-w-container px-6 py-24 md:px-12 lg:px-16 lg:py-28">
+      <div className="mx-auto max-w-container px-6 py-24 md:px-12 lg:px-16 lg:py-[6rem]">
         <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           <div className="space-y-6">
             <p className="font-serif text-2xl font-semibold tracking-tight">Michelangelo</p>

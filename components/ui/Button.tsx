@@ -28,7 +28,7 @@ const variants: Record<
   string
 > = {
   primary:
-    'rounded-sm bg-forestGreen text-cream hover:bg-forestGreen/90 hover:text-cream [&:hover]:shadow-card',
+    'rounded-sm bg-forestGreen text-cream shadow-sm hover:bg-gold hover:text-charcoal [&:hover]:shadow-card-hover',
   secondary:
     'rounded-sm border border-stone bg-transparent text-charcoal hover:border-forestGreen hover:bg-cream hover:text-charcoal',
   ghost:

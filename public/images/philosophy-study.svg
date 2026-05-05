@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="800" viewBox="0 0 640 800" fill="none" role="img" aria-labelledby="t">
+  <title id="t">Abstract cross-hatching motif evoking Renaissance figure study and sfumato paper tone</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9F7F4"/>
+      <stop offset="55%" stop-color="#E8E3DA"/>
+      <stop offset="100%" stop-color="#D4CEC4"/>
+    </linearGradient>
+    <pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#2B2B2B" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+    <pattern id="hatch2" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(8)">
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#2B2B2B" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/>
+  <rect width="640" height="800" fill="url(#hatch)"/>
+  <rect width="640" height="800" fill="url(#hatch2)"/>
+  <ellipse cx="330" cy="360" rx="220" ry="300" fill="#2B2B2B" fill-opacity="0.04"/>
+  <path d="M140 540c80-120 200-200 360-220" stroke="#2B2B2B" stroke-opacity="0.14" stroke-width="1.25" stroke-linecap="round"/>
+  <path d="M180 580c90-110 220-190 380-200" stroke="#2B2B2B" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round"/>
+  <path d="M220 620c100-90 240-160 360-168" stroke="#2B2B2B" stroke-opacity="0.08" stroke-width="0.9" stroke-linecap="round"/>
+  <rect x="48" y="48" width="544" height="704" stroke="#8B8680" stroke-opacity="0.35" stroke-width="1"/>
+</svg>

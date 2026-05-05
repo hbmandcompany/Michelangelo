@@ -38,6 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - TypeScript (strict)
 - Tailwind CSS with the Michelangelo palette and typographic scale
 - Framer Motion for scroll reveals and subtle interaction
+- React Three Fiber + Three.js for a minimal, transparent hero accent (client-only, respects reduced motion)
 - `next/font` for Cormorant Garamond, Crimson Pro, and JetBrains Mono
 
 ## Project structure

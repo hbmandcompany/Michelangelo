@@ -51,7 +51,7 @@ export function Notebook() {
                 <dd className="text-right text-forestGreen">opt-in curricula</dd>
               </div>
               <div className="flex justify-between gap-6 border-t border-stone/25 pt-4">
-                <dt>Recall</dt>
+                <dt>Semantic search</dt>
                 <dd className="text-right text-forestGreen">vector + lexical</dd>
               </div>
             </dl>

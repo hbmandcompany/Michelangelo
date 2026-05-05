@@ -1,11 +1,19 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import dynamic from 'next/dynamic'
+import { motion, useReducedMotion } from 'framer-motion'
 
 import { Button } from '@/components/ui/Button'
 import { fadeInUp, staggerContainer } from '@/lib/animation-variants'
 
+const HeroAccent3D = dynamic(
+  () => import('@/components/ui/HeroAccent3D').then((m) => ({ default: m.HeroAccent3D })),
+  { ssr: false }
+)
+
 export function Hero() {
+  const reduceMotion = useReducedMotion()
+
   return (
     <section
       id="top"
@@ -15,6 +23,8 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-cream/35" aria-hidden />
       <div className="pointer-events-none absolute -right-32 top-1/4 h-[480px] w-[480px] rounded-full bg-stone/10 blur-3xl" aria-hidden />
       <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-forestGreen/5 blur-2xl" aria-hidden />
+
+      <HeroAccent3D />
 
       <motion.div
         className="relative mx-auto w-full max-w-container"
@@ -46,10 +56,11 @@ export function Hero() {
           className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center"
         >
           <Button
-            aria-label="Request early access"
+            aria-label="Request early access — jump to invitation form"
             variant="primary"
             className="min-w-[200px]"
-            type="button"
+            as="a"
+            href="#contact"
           >
             Request Early Access
           </Button>
@@ -62,8 +73,16 @@ export function Hero() {
       <motion.div
         className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 md:block"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 6, 0] }}
-        transition={{ delay: 1.4, duration: 2.2, repeat: Infinity, ease: [0.4, 0, 0.2, 1] }}
+        animate={
+          reduceMotion
+            ? { opacity: 1, y: 0 }
+            : { opacity: 1, y: [0, 6, 0] }
+        }
+        transition={
+          reduceMotion
+            ? { delay: 0.4, duration: 0.5, ease: [0.4, 0, 0.2, 1] }
+            : { delay: 1.4, duration: 2.2, repeat: Infinity, ease: [0.4, 0, 0.2, 1] }
+        }
         aria-hidden
       >
         <div className="flex flex-col items-center gap-1 text-stone">
