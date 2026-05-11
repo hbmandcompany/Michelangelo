@@ -28,11 +28,11 @@ const variants: Record<
   string
 > = {
   primary:
-    'rounded-sm bg-forestGreen text-cream shadow-sm hover:bg-gold hover:text-charcoal [&:hover]:shadow-card-hover',
+    'rounded-full bg-forestGreen text-cream shadow-sm hover:bg-gold hover:text-charcoal [&:hover]:shadow-card-hover',
   secondary:
-    'rounded-sm border border-stone bg-transparent text-charcoal hover:border-forestGreen hover:bg-cream hover:text-charcoal',
+    'rounded-full border border-stone bg-transparent text-charcoal hover:border-forestGreen hover:bg-cream hover:text-charcoal',
   ghost:
-    'rounded-none border-none bg-transparent p-0 text-forestGreen underline-offset-8 hover:text-gold hover:underline hover:opacity-95',
+    'rounded-full border-none bg-transparent px-2 text-forestGreen underline-offset-8 hover:text-gold hover:underline hover:opacity-95',
 }
 
 const motionLiftClasses =

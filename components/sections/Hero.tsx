@@ -17,12 +17,9 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="hero-gradient-shift relative flex min-h-screen flex-col justify-center overflow-hidden px-6 pb-24 pt-32 md:px-12 lg:px-16"
+      className="hero-canvas relative flex min-h-screen flex-col justify-center overflow-hidden px-6 pb-24 pt-32 md:px-12 lg:px-16"
       aria-label="Introduction"
     >
-      <div className="pointer-events-none absolute inset-0 bg-cream/35" aria-hidden />
-      <div className="pointer-events-none absolute -right-32 top-1/4 h-[480px] w-[480px] rounded-full bg-stone/10 blur-3xl" aria-hidden />
-      <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-forestGreen/5 blur-2xl" aria-hidden />
 
       <HeroAccent3D />
 
@@ -56,13 +53,13 @@ export function Hero() {
           className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center"
         >
           <Button
-            aria-label="Request early access — jump to invitation form"
+            aria-label="Open The Manuscript page"
             variant="primary"
             className="min-w-[200px]"
             as="a"
-            href="#contact"
+            href="/manuscript"
           >
-            Request Early Access
+            The Manuscript
           </Button>
           <Button variant="ghost" as="a" href="#about" className="px-3 py-3 text-base">
             Read the Vision
