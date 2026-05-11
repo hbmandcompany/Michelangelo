@@ -125,15 +125,7 @@ export function ManuscriptHero() {
           initial="hidden"
           animate="visible"
         >
-          <motion.div
-            className="relative mx-auto w-full max-w-lg rounded-[1.35rem] border border-stone/25 bg-white shadow-[0_32px_80px_-24px_rgba(43,43,43,0.28)]"
-            animate={reduceMotion ? {} : { y: [0, -10, 0] }}
-            transition={{
-              duration: 12,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          >
+          <div className="relative mx-auto w-full max-w-lg rounded-[1.35rem] border border-stone/25 bg-white shadow-[0_32px_80px_-24px_rgba(43,43,43,0.28)]">
             <div className="flex h-11 items-center gap-2 border-b border-stone/12 bg-cream/95 px-4">
               <span className="flex gap-1.5" aria-hidden>
                 <span className="h-2.5 w-2.5 rounded-full bg-stone/35" />
@@ -156,7 +148,7 @@ export function ManuscriptHero() {
               </span>
             </div>
             <DocumentChrome />
-          </motion.div>
+          </div>
         </motion.div>
       </div>
 

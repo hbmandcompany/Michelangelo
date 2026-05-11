@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
@@ -97,13 +98,14 @@ export function Navigation() {
         <div
           className={`mx-auto flex max-w-container items-center justify-between gap-6 px-5 py-3 md:px-7 md:py-3.5 ${pillClass}`}
         >
-        <a
-          href="#top"
+        <Link
+          href="/"
+          onClick={() => setOpen(false)}
           className="font-serif text-xl font-semibold tracking-tight text-charcoal transition-opacity duration-500 hover:opacity-90 md:text-[1.45rem]"
           aria-label="Michelangelo home"
         >
           Michelangelo
-        </a>
+        </Link>
 
         <nav
           className="hidden items-center gap-8 lg:flex"

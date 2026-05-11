@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { SocialLinks } from '@/components/ui/SocialLinks'
 
 const linkClass =
@@ -68,9 +70,12 @@ export function Footer() {
 
         <div className="mt-20 grid gap-16 md:grid-cols-2 lg:grid-cols-5 lg:gap-12">
           <div className="space-y-6 lg:col-span-2">
-            <p className="font-serif text-3xl font-semibold tracking-tight text-charcoal">
+            <Link
+              href="/"
+              className="inline-block font-serif text-3xl font-semibold tracking-tight text-charcoal transition-opacity duration-500 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forestGreen focus-visible:ring-offset-2 focus-visible:ring-offset-footerTan"
+            >
               Michelangelo
-            </p>
+            </Link>
             <p className="font-body text-lg leading-relaxed text-charcoal/90">
               Une maison française de formes handcrafted pour les applications enterprise.
             </p>
