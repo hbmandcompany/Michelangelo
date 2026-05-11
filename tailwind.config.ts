@@ -10,6 +10,8 @@ const config: Config = {
         stone: '#8B8680',
         forestGreen: '#3A4F41',
         gold: '#C9A96E',
+        /** Warm natural tan for footer — bridges cream and gold */
+        footerTan: '#E4D6C4',
         sand: '#D9C5A0',
         sandDeep: '#C7AE82',
         deepBrown: '#D9C5A0',

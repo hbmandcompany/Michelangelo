@@ -8,6 +8,7 @@
   --stone: #8b8680;
   --forest-green: #3a4f41;
   --gold: #c9a96e;
+  --footer-tan: #e4d6c4;
   --sand: #d9c5a0;
   --sand-deep: #c7ae82;
 }
@@ -52,6 +53,15 @@
 
 .hero-canvas {
   background-color: var(--cream);
+}
+
+.manuscript-hero-surface {
+  background-color: var(--cream);
+  background-image:
+    linear-gradient(rgba(58, 79, 65, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58, 79, 65, 0.04) 1px, transparent 1px);
+  background-size: 52px 52px;
+  background-position: center top;
 }
 
 .luxe-pill {

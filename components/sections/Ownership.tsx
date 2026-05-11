@@ -2,55 +2,9 @@
 
 import { motion } from 'framer-motion'
 
+import { OwnershipVisual } from '@/components/sections/OwnershipVisual'
 import { SectionContainer } from '@/components/ui/SectionContainer'
 import { fadeInUp, staggerContainer } from '@/lib/animation-variants'
-
-const steps = [
-  {
-    glyph: (
-      <svg viewBox="0 0 32 32" className="h-7 w-7" aria-hidden fill="none">
-        <path
-          d="M8 24l8-14 12 14M10 20h14"
-          stroke="currentColor"
-          strokeWidth="1.35"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
-    label: 'Create',
-  },
-  {
-    glyph: (
-      <svg viewBox="0 0 32 32" className="h-7 w-7" aria-hidden fill="none">
-        <path
-          d="M8 22c4-6 14-14 22-14M22 26c-4-4-8-12-14-13"
-          stroke="currentColor"
-          strokeWidth="1.35"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
-    label: 'Organize',
-  },
-  {
-    glyph: (
-      <svg viewBox="0 0 32 32" className="h-7 w-7" aria-hidden fill="none">
-        <rect x="7" y="10" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.35" />
-        <path d="M11 18h10M11 22h6" stroke="currentColor" strokeWidth="1.25" />
-      </svg>
-    ),
-    label: 'Mint',
-  },
-  {
-    glyph: (
-      <svg viewBox="0 0 32 32" className="h-7 w-7" aria-hidden fill="none">
-        <circle cx="16" cy="16" r="8" stroke="currentColor" strokeWidth="1.35" />
-        <path d="M16 12v4l3 3" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" />
-      </svg>
-    ),
-    label: 'Earn',
-  },
-] as const
 
 export function Ownership() {
   return (
@@ -106,22 +60,12 @@ export function Ownership() {
         </motion.div>
 
         <motion.div
-          className="mt-16 grid grid-cols-2 gap-x-10 gap-y-14 rounded-sm border border-stone/25 bg-deepBrown/60 px-8 py-12 sm:grid-cols-4 md:px-12 md:py-14"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
           variants={fadeInUp}
-          role="list"
-          aria-label="Ownership flow"
         >
-          {steps.map((step) => (
-            <div key={step.label} className="flex flex-col items-center gap-5 text-center" role="listitem">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full border border-gold/45 text-gold shadow-inner">
-                {step.glyph}
-              </div>
-              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-stone">{step.label}</span>
-            </div>
-          ))}
+          <OwnershipVisual />
         </motion.div>
 
         <motion.div

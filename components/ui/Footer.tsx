@@ -33,7 +33,7 @@ const resourceLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative isolate overflow-hidden bg-sand text-charcoal">
+    <footer className="relative isolate overflow-hidden bg-footerTan text-charcoal">
       <div className="relative mx-auto max-w-container px-6 pt-24 md:px-12 lg:px-16 lg:pt-28">
         <div className="lift-on-hover relative overflow-hidden rounded-[2.5rem] border border-forestGreen/25 bg-forestGreen px-8 py-12 text-cream shadow-card md:px-12">
           <div className="relative grid items-center gap-8 md:grid-cols-[1.4fr_1fr]">

@@ -1,8 +1,8 @@
 'use client'
 
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 
+import { PhilosophyVisual } from '@/components/sections/PhilosophyVisual'
 import { SectionContainer } from '@/components/ui/SectionContainer'
 import { fadeInUp } from '@/lib/animation-variants'
 
@@ -51,65 +51,15 @@ export function Philosophy() {
           </div>
         </div>
 
-        <div className="relative flex flex-col justify-center gap-10 lg:col-span-2">
-          <motion.figure
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={fadeInUp}
-            className="relative overflow-hidden rounded-sm border border-stone/30 bg-white/40 shadow-card"
-          >
-            <Image
-              src="/images/philosophy-study.svg"
-              alt="Desaturated abstract study: fine cross-hatching and warm paper tone evoking Renaissance preparatory drawing, cropped for editorial calm."
-              width={640}
-              height={800}
-              className="h-auto w-full object-cover"
-              sizes="(min-width: 1024px) 360px, 100vw"
-              priority={false}
-              unoptimized
-            />
-            <figcaption className="sr-only">
-              Interpretive motif — not a photograph of a museum object; procedural texture only.
-            </figcaption>
-          </motion.figure>
-
-          <motion.figure
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={fadeInUp}
-            className="relative overflow-hidden rounded-sm border border-stone/30 bg-gradient-to-b from-white/80 to-cream/60 p-10 shadow-card"
-          >
-            <div
-              className="absolute inset-0 opacity-[0.08]"
-              aria-hidden
-              style={{
-                backgroundImage: `repeating-linear-gradient(
-                  -12deg,
-                  #2b2b2b 0,
-                  #2b2b2b 1px,
-                  transparent 1px,
-                  transparent 10px
-                ), repeating-linear-gradient(
-                  8deg,
-                  #2b2b2b 0,
-                  #2b2b2b 1px,
-                  transparent 1px,
-                  transparent 12px
-                )`,
-              }}
-            />
-            <blockquote className="relative font-serif text-2xl font-normal leading-snug tracking-tight text-charcoal md:text-[1.65rem]">
-              “The artist, the engineer, the contractor, and the owner can be, once again, the same
-              person.”
-            </blockquote>
-          </motion.figure>
-
-          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-stone">
-            Renaissance restraint · procedural texture (not archival photography)
-          </p>
-        </div>
+        <motion.div
+          className="relative flex flex-col justify-center lg:col-span-2"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUp}
+        >
+          <PhilosophyVisual />
+        </motion.div>
       </div>
     </SectionContainer>
   )
